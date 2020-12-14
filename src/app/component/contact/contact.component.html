@@ -1,0 +1,30 @@
+<div class="contactHeading">
+    <h1>Contacts</h1>
+  </div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Phone</th>
+          <th>Email</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts">
+          <td>{{contact.id}}</td>
+          <td>{{contact.name}}</td>
+          <td>{{contact.city}}</td>
+          <td>{{contact.state}}</td>
+          <td>{{contact.phone}}</td>
+          <td>{{contact.email}}</td>
+          <td><button (click)="delete(contact.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
